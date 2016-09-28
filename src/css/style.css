@@ -1,0 +1,457 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700,900");
+
+/* Definición de bloques para estructura_________________________________________ */	
+html{overflow: hidden;}
+body { margin: 0;height: 100%;} 
+.x_row, .x_col { position: absolute; }
+.x_row { left: 0; right: 0; }
+.x_col { top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; }
+.scroll-y { overflow-y: auto; }
+
+
+/* Estructura base _______________________________________________________________*/
+#menuprincipal{top:0px;height: 45px;background-color: white;min-width: 800px;}
+#principal { top: 45px; bottom: 50px;background: white;min-width: 800px;}
+#inferior { height: 50px; bottom: 0;background: black;min-width: 800px;}
+/*#principal { height: 100%; background: white;min-width: 800px;}
+#inferior { height: 0px; bottom: 0;background: white;}*/
+
+/* General _______________________________________________________________*/
+body{position: inherit;}
+
+*:focus{border: none;outline: none;}
+/*body *{font-size: 13px;font-family:'Lato';line-height: 20px;}*/
+body *{font-size: 13px;font-family:'Lato';line-height: 2;}
+h1{font-size: 18px;font-weight:700;}
+h2{font-size: 15px;font-weight:700;}
+a{text-decoration: none;color:#3b5998;}
+a:hover{text-decoration: underline;}
+ul.pagination li.unavailable a:hover, ul.pagination li a:hover{text-decoration: none;}
+.row{max-width:100%;}
+.column.nopadding, .columns.nopadding {padding-left: 0px;padding-right: 0px;}
+input[type="checkbox"], input[type="radio"]{margin: 0px;}
+.tabs-content > .content {width: 100%;padding-top: 5px;}
+
+/*.reveal-modal.open{top:5%!important;}*/
+/*.reveal-modal.open.large,.reveal-modal.open.xlarge{max-height: 90%;overflow-y: auto;overflow-x: hidden;padding: 10px 29px 10px 29px; border-color: white;border-style: solid;border-width: 20px 1px 20px 1px;}*/
+.reveal-modal.open{top:5%!important;max-height: 90%;overflow-y: auto;overflow-x: hidden;}
+.reveal-modal.open.large,.reveal-modal.open.xlarge{padding: 10px 29px 10px 29px; border-color: white;border-style: solid;border-width: 20px 1px 20px 1px;}
+.reveal-modal.open.large{margin-left:-35%;width: 70%;}
+.reveal-modal.open.xlarge{margin-left:-45%;width: 90%;}
+.parrafo-modal{margin-left:10%;margin-right:10%;}
+
+#modalPOI{padding: 0px;}
+#modalPOI .close-reveal-modal,.popup-inner .close-reveal-modal
+{font-size: 1.375rem;line-height: 1;position: absolute;top: 0.5rem;right: 0.6875rem;color: #FFF;font-weight: bold;background-color: rgba(0,0,0,0.5);}
+
+.tooltip{z-index:4000;}
+.flotante{ position: absolute;z-index:3000;}
+.reveal-modal{z-index:3004;}
+.reveal-modal-bg{z-index:3003;}
+ul[data-dropdown-content],.top-bar *{z-index:3001;}
+.reveal-modal-bg{background:rgba(18, 32, 17, 0.9);}
+iframe{border: none;}
+
+.must-log-in{margin-top:10px;margin-bottom:10px;padding:20px;background-color:#EBEBEB;}
+
+/* Bloque "principal" _______________________________________________________________*/
+#controles{ width: 264px; overflow: visible;background: white;}
+/*#map-content{ left: 264px;right: 120px;overflow: hidden;}
+#banner{ width: 120px; right: 0;}*/
+#rightside{ left: 264px;right: 0px;overflow: hidden;}
+
+.f-dropdown{position: fixed !important; top: auto !important;}
+
+/* MENU PRINCIPAL _______________________________________________________________*/
+.menulogo{height:45px;margin-left: 10px;}
+/*#mainlogo{top:5px;}
+#mainlogo a{font-weight:900;color:red;font-size: 15px;vertical-align: bottom;}*/
+/*.off-canvas-wrap{top:70px;bottom:0px;}*/
+.off-canvas-wrap{top:0px;bottom:0px;}
+.inner-wrap{height:100%;}
+.move-right > .inner-wrap {
+	-webkit-transform: translate3d(264px,0,0);
+	-moz-transform: translate3d(264px,0,0);
+	-ms-transform: translate3d(264px,0,0);
+	-o-transform: translate3d(264px,0,0);
+	transform: translate3d(264px,0,0);
+}
+.left-off-canvas-menu{width:264px;}
+.left-off-canvas-menu a:hover{color: white;}
+
+#menu_title_bar{top:0px;height: 45px;}
+/*#tabs_wrapper{top:45px;bottom: 0px;margin-bottom: 0px;}*/
+.top-bar .right{margin-right: 20px;}
+
+ul.off-canvas-list dd a{display: block;padding: 0.66667rem;color: rgba(255, 255, 255, 0.7);border-bottom: 1px solid #262626;}
+ul.off-canvas-list dd,ul.off-canvas-list dl {margin-bottom:0px;}
+.content{padding-top: 0px;}
+
+#fblike{height: 20px;width: 150px;}
+#twitlike,#fblike{margin-top: 10px;}
+.social_container{padding-left: 10px;border-bottom: 1px solid #262626;padding-bottom: 10px;}
+
+#dd_link_detalleRutaTab{display:none;}
+
+/* ICONOS _______________________________________________________________*/
+.start,.end{float:inherit !important;}
+
+.iconpoi{width:0px;height:0px;padding: 11px 11px 11px 11px; background-size: 100% 100%;background-repeat: no-repeat;}/*CUCHUFLETA CHROME*/
+.iconpoi.state{padding: 16px 14px 16px 15px;}/*CUCHUFLETA CHROME*/
+.iconpoi.default{padding: 13px 14px 14px 15px;}/*CUCHUFLETA CHROME*/
+.iconpoi.small{padding: 13px 10px 14px 11px;margin-right: 3px}/*CUCHUFLETA CHROME*/
+.iconpoi.bkgbox{opacity:0.5;filter:alpha(opacity=50); /* For IE8 and earlier */}
+
+.icon-cluster{border: none;background: transparent;}
+.cluster-childCount{
+	font-size:14px;
+	color:white;
+	text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	height:100%;
+	width:100%;
+	background-size:100% 100%;
+	text-align: center;
+	font-weight:700;
+}
+/* ICONOS PERSONALIZADOS _______________________________________________________________*/
+.lhp.small{background-image: url(../img/custom_icons/lhp.png);}
+.lhp{background-image: url(../img/custom_icons/lhp_nt.png);}
+
+/* OBTENER RUTA _______________________________________________________________*/
+/*.boxruta_param {text-align: center;border: solid #EBEBEB 2px;margin: 0px 3px 15px 3px;}*/
+.boxruta_param {text-align: center;margin-bottom: 10px;}
+.boxruta_param.detalle {text-align: left; padding-top: 5px;margin-top: 10px}
+.boxruta_param.detalle p{text-align: center; margin: 0px 0px 5px 0px;}
+.boxruta_param.detalle a{margin: 5px;}
+textarea.ruta_param{margin: 0px;}
+input[type="text"].ruta_param{
+	width: 100%;border: none;margin: 0px;display: inline;
+	padding: 0 45px 0 5px;height: 30px;
+	/*padding-right: 45px;*/
+	-webkit-box-shadow: none;box-shadow: none;background: none;
+}
+
+.listaBoxMarker{overflow:hidden;margin:0px}
+
+input[type="text"].ruta_paramReject{color:red;font-style:italic;}
+
+
+.menu_ruta { text-align:center;padding:4px 0px 4px 0px;
+	background:#EBEBEB;
+	/*
+	border-top: solid 2px #D9D9D9; */
+}
+.menu_ruta img { margin-left:5px;width: 20px;width: 20px;}
+.menu_ruta img.opt_detallePOI {width: 20px;}
+
+#img_iniruta_home_search,#img_iniruta_home_search_cancel { margin-left:0px;}
+#img_finruta_home_search,#img_finruta_home_search_cancel { margin-left:0px;}
+
+.radio{display: inline-block;width: 40%;margin: 10px 5px 10px 5px;}
+.radio input[type=radio]{margin: 0px;}
+
+
+/* DETALLE RUTA _______________________________________________________________*/
+.menu_detalle_ruta{display: block;}
+.rutaExtras {border: solid #EBEBEB 2px;margin:0px 3px 15px 3px;padding-bottom: 5px}
+#compartirRuta {background:#eaedf4; border-color:#d4d4de;}
+#compartirRuta > img { margin-top:7px; margin-left:10px;margin-right:10px}
+
+input[type="text"].enlace_text{margin: 0px;margin-left:-32px;padding-left: 34px;display: inline;background: none}
+.lindo-text{background:#EBEBEB;}
+.iconlink{margin-left:5px;width: 22px;}
+
+#resumenRuta {background:#eaedf4; border-color:#d4d4de; margin-bottom: 5px;}
+#resumenRuta a{ text-decoration: none;cursor: pointer;}
+.instruccion,.instruccion-par,.instruccion-impar { color:#828387; font-size:12px; list-style:none; padding-left:12px; padding-right:8px;}
+.instruccion-par,.instruccion-impar{border-bottom: #d4d4de 1px solid; padding-top: 5px;padding-bottom: 5px;}
+.instruccion-par{background-color: #FAFBFD}
+.instruccion-impar{background-color: #FFFFFF}
+.lbl_ruta{display: block;margin-bottom: 10px;}
+
+/* HISTORIAL RUTA _______________________________________________________________*/
+.ruta_desc_content{background:#EBEBEB;border:#EBEBEB solid;margin: 0px 5px 10px 5px;padding: 3px}
+.ruta_desc_content:hover{cursor: pointer;border:#C9D6CF solid;}
+.ruta_desc_content div{max-width: 100%;overflow: hidden;}
+.ruta_desc_content div span{white-space:nowrap;}
+
+/* FAVORITOS _______________________________________________________________*/
+.listaPOI_desc_content{background:#EBEBEB;border:#EBEBEB solid;margin: 0px 5px 10px 5px;padding: 3px}
+.listaPOI_desc_content:hover{cursor: pointer;border:#C9D6CF solid;}
+.listaPOI_desc_content div{max-width: 100%;overflow: hidden;}
+.listaPOI_desc_content div span{white-space:nowrap;}
+
+/* Pestaña COLABORAR___________________________________________________________________________*/
+
+/*#subirImagen { width:120px; height:33px; display:block; background:url(../img/btn-subir-foto.png) no-repeat; border:0px; font-family: 'Lato', sans-serif; font-size:11px; color:#FFFFFF; text-transform:uppercase; text-shadow: 0.1em 0.1em #4b9450; padding-right:30px; font-weight:700; float:left; margin-right:5px; margin-left:3px;}*/
+select{width: 90%;}
+
+/* Pestaña CONSEJOS ___________________________________________________________________________*/
+
+/*#consejosTab a { color:#0076d6; font-family: 'Lato', sans-serif; font-weight:700; font-size:13px; line-height: 0.5;}
+#consejosTab a:hover { text-decoration:none; color:#00325c;}
+#consejosTab div { margin:7px 0px 5px 0px; color:#7e7e7e; font-size:12px; padding:5px 5px 7px 5px; border-bottom:#CCCCCC dashed 1px;}*/
+
+.consejo-row.row .columns{margin-bottom: 10px;}
+.consejo-row.row .columns div{margin-bottom: 5px;}
+.subdate{color:#898F9C;font-size: 11px;}
+
+/* Columna MAPA _______________________________________________________________*/
+
+/*#menuprincipal{top:0px;height: 45px;background-color: white;}*/
+#map-content{top:0px;bottom: 0px;}
+
+
+#map-area{left:0px;right: 120px;overflow: hidden;}
+#banner{ width: 120px; right: 0;}
+
+
+/*
+#map-logo{height: 100%;display: none;}
+#map-logo img,#bicicultura-logo{height: 100%;}
+*/
+#userlogobox,#userlogobox img{height: 100%;}
+.menubutton img{height: 15px;}
+
+
+
+#map-logo{width: 169px; top:10px;left:65px;pointer-events:none;display: none;}
+
+#map{height: 100%;}
+
+.zoombtn{font-size: 23px;display: block;color:black;font-weight:700;line-height: 18px;}
+#zoom-in:hover,#zoom-out:hover,#zoom-in:focus,#zoom-out:focus{background-color:transparent;color: black;text-decoration: none;}
+
+.flotante-izquierda{text-align: center;background-color: white;width: 40px; left: 13px;box-shadow: 0 0 8px rgba(0,0,0,0.4);border: 1px solid #888;-webkit-border-radius: 5px;border-radius: 5px;}
+
+.user-login{top:10px;width: 70px;right:10px;
+background: Indigo;
+}
+#loading-box{top:10px;padding-top:4px;padding-bottom:4px;}
+#control-zoom{top:53px;padding-top:4px;padding-bottom:4px;}
+#displaycapas{top:105px;padding-top:8px;padding-bottom:2px;}
+/*#displaycapas:hover{width: 300px}*/
+
+/* El tamaño obedece a la cantidad de capas universales que se muestran en el panel de capas */
+#displaycapasDiv{max-height: 165px;overflow: auto;text-align: left;padding-left: 8px}
+/*.jspPane{padding-left: 6px !important;}
+.jspVerticalBar{width: 7px;}*/
+
+.leaflet-control-scale{left:60px;}
+
+#displaycapas label { margin-bottom:7px;}
+.showhide-capas{width: 14px;margin-bottom:7px;}
+.check_off{opacity:0.5;filter:alpha(opacity=50); /* For IE8 and earlier */}
+.checkCapas{display: none;}
+
+#ocultar-controles{height: 38px; width: 38px; bottom: 10px; left: 0px;background-size: 100% 100%;}
+#ocultar-banner{height: 38px; width: 38px; bottom: 10px; right: 0px;background-size: 100% 100%;}
+
+.ocultar-left,.mostrar-right{background: url(../img/arrow_left.png);}
+.ocultar-right,.mostrar-left{background: url(../img/arrow_right.png);}
+
+.loadbtn{width: 26px;height: 26px;}
+
+/*#contextmenu{top:200px;left:200px;width: 200px;height: 200px;background: red;}*/
+
+.zonalabel{background: white;display: inline-block;border: solid black thin;}
+.zonalabel h3{margin: 0px}
+
+/* Columna Banner _______________________________________________________________*/
+#banner {overflow: hidden;}
+
+/* Bloque "footer" _______________________________________________________________*/
+.logo_bicicultura { height:40px;margin-top:5px;}
+
+.ride { height:40px;margin-top:5px;}
+.chile { height:40px;margin-top:5px;}
+
+.carrusel{width: 600px;margin-top:5px;background:url(../img/bkg-news.png) left no-repeat}
+.orbit-container{height:40px;width: 590px;background:#96a4b5;
+	margin-left:7px;-webkit-border-radius: 8px;border-radius: 8px;
+}
+.carrusel ul li{max-width:555px;padding-left:40px;overflow: hidden;white-space:nowrap;line-height:40px;}
+.orbit-container .orbit-prev,.orbit-container .orbit-next{height:40px;top: 0%;margin-top: 0px;}
+.orbit-timer{display: none;}
+
+
+/*ALERTAS ____________________________________________*/
+
+.alert-box-error{background-color: #BA0000;border-color: #A00020;}
+.alert-box .close{top: inherit;background-color: initial;opacity: initial;}
+.alert-box p{line-height: initial;margin-bottom: initial;}
+.alert-box .close:hover{background-color: initial;opacity: initial;color: white;}
+
+/*DETALLE POI_______________________________________________*/
+
+.leaflet-popup-content-wrapper{margin:0px;padding:0px;border-radius: 10px;}
+.leaflet-popup-content{margin:0px;padding:0px;border:#CE9824 solid;min-width: 240px;border-radius: 10px;overflow: hidden;}
+.popup-modal,.popup-inner{overflow-y: auto;width:100%;overflow-x: hidden;}
+/*.popup-inner { max-height: 350px;overflow-y: auto;width:100%;overflow-x: hidden;padding:10px 5px 10px 5px;}*/
+.popup-inner {max-height: 350px;}
+.atributos-poi{padding:0px 10px 0px 10px;}
+
+.popup-inner .boxruta_param{margin-left: 0px;margin-right: 0px;}
+
+.btn_poi{font-size: 10px;margin:0px 5px 0px 5px;}
+.opt_detallePOI{width:20px;height:20px;}
+.bloque_detallePOI{width:100%;text-align:center;margin:5px 0px 5px 0px;}
+
+/*.leaflet-popup-close-button{left: 0px;}*/
+
+.leaflet-container h1{font-size: 20px;text-align: center;}
+.colaborarContent{background:#E3EED7;padding: 5px 3px 5px 3px;}
+.imgpoi{background-position:center center;background-size:100%;height:60px}
+
+.leaflet-popup-tip{border-top: 15px solid #CE9824;margin-top: -3px;}
+/*.bloque_detallePOI_princ{width: 21px;height: 25px;overflow: hidden;background: orange;}
+.bloque_detallePOI_princ:hover{width: 100%;
+	transition: width 1s;-webkit-transition: width 1s;
+}*/
+.leaflet-container p {font-size: inherit;line-height: inherit;margin: inherit;}
+
+/*COMENTARIOS _______________________________________________*/
+.nombre_vcard{margin: 0px 5px 0px 3px;font-weight:700;}
+#txt_comentario{margin: 10px 0px 10px 0px;}
+.modallogo{margin-bottom: 10px;max-height: 40px;}
+
+.comentario-box.parent .comentario-box{margin-left: 40px;margin-right: 20px;}
+
+.comment-body{padding-left: 40px;padding-bottom: 10px;text-align:justify;}
+
+.comment-body .nombre_vcard{margin-left: 0px;font-weight:700;color:#3b5998;}
+.comment-profile-pic{float: left;}
+.comment-sub-opt > *{margin-right: 5px;}
+.comment-sub-opt a{color:#3b5998;font-size: 11px;}
+
+/*GRUPOS DE FB _______________________________________________*/
+/*
+.wrapper {width:300px;border:1px solid #ccc;font-family: "lucida grande",tahoma,verdana,arial,sans-serif;float:left;}
+.top {margin:5px;border-bottom:2px solid #e1e1e1;float: left;width:290px;}
+.single {margin:5px;border-bottom:1px dashed #e1e1e1;float:left;}
+.img{float:left;width:60px;text-align:center;margin:5px 5px 5px 0px;border-right:1px dashed #e1e1e1;}
+.text {width:220px;float:left;font-size:10px;}
+a {text-decoration: none;color: #3b5998;}
+*/
+
+/*FACEBOX LIKE BOX _______________________________________________*/
+iframe.fb_ltr { width:90% !important; }
+.fb-comments, .fb-comments iframe[style],.fb_iframe_widget,
+.fb_iframe_widget span,.fb_iframe_widget span iframe[style]
+{width: 100%! important;}
+#fb-root{display: none;}
+
+/*Modal Alerta _______________________________________________*/
+.confirm-alerta label{margin-bottom: 15px;}
+.confirm-alerta button{margin-bottom: 0px;}
+
+
+/*DROPDOWNS _______________________________________________*/
+
+.simpledropdown{
+	margin: 0px;display: inline-block;
+}
+.simpledropdown li {
+	display: block;
+  /*font: bold 12px/18px sans-serif;
+  cursor: pointer;
+  background: #fff;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;*/
+}
+.simpledropdown li:hover {
+  /*background: #555;*/
+}
+.simpledropdown li ul {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  /*height: 37px;*/
+  height: 30px;
+  margin: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.simpledropdown li ul.bkg_simpledropdown {
+	background:#EBEBEB;
+}
+.simpledropdown li:hover ul {
+  display: block;
+  opacity:1;
+  visibility: visible;
+}
+.simpledropdown li:hover ul.bkg_simpledropdown {
+	opacity:0.6;
+}
+.simpledropdown li ul li { 
+  padding-top: 3px;
+  padding-bottom: 9px;
+	/*background:#EBEBEB;*/
+  /*background: #555; */
+  /*color: #fff;*/
+  /*text-shadow: 0 -1px 0 #000;*/
+  display: inline-block; 
+}
+/*.simpledropdown li ul li:hover { background: #666; }*/
+.simpledropdown .iconpoi{
+	position: absolute;
+	top:2px;
+	right: 5px;
+}
+.simpledropdown .iconpoi.state{
+  top:-2px;
+}
+.simpledropdown li ul img{
+	height: 20px;width: 20px;margin-left:5px;margin-right: 5px; 
+}
+
+.toast-position-top-center{top:45px;}
+
+
+
+/*___________________________________________________________________*/
+/* TODOS LOS FONDOS y BORDE DEL MAPA */
+/*.top-bar, .top-bar *, #pestanasWrap, #inferior, #banner *,#map-area {*/
+.top-bar, .top-bar *, #inferior, #banner *,#map-area {
+background-color: white !important;
+/*Cornsilk
+Beige
+GhostWhite
+HoneyDew
+Ivory
+LemonChiffon
+LavenderBlush
+LightCyan
+LightGoldenRodYellow
+LightYellow
+Linen
+MintCream
+OldLace
+SeaShell
+Snow
+WhiteSmoke*/
+color: black !important;
+}
+#map-area,#pestanasWrap{border-bottom: #ff5335 solid 3px;border-top: #ff5335 solid 3px;}
+/*#pestanasWrap{border-right: #ff5335 solid 1px;}*/
+#map-area{border-right: #ff5335 solid 3px;border-left: #ff5335 solid 3px;}
+.leaflet-popup-content{border: #ff5335 solid 3px;}
+.leaflet-popup-tip{border-top: 15px solid #ff5335;}
